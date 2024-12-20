@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("images/pexels-dennisleinarts-1437953.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; /* Added to prevent background image from repeating */
+  background-attachment: fixed; /* Added to fix the background image */
+}
+
+/* Style the header */
+/* I'm happy with the default font */
+.header {
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Create three unequal columns that float next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 550px;  /*Should be removed. Only for demonstration */
+  margin-bottom: 100px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+  background-color: rgb(0, 140, 255);
+}
+
+/* Middle column */
+.column.right {
+  width: 80%;
+  background-color: rgb(233, 233, 233);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+}
+
+.footer img {
+  width: 100px; 
+  height: auto; 
+  vertical-align: middle;
+}
+
+.button {
+  background-color: #555555; /* Black */
+  margin: auto;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px; /* Set a fixed width for all buttons */
+  height: 50px; /* Set a fixed height for all buttons */
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+  transition: background-color 0.3s; /* Add transition effect for hover */
+}
+
+/* Button Mouse-Over effect */
+.button:hover {
+background-color: #003cff; /* Darker background colour on hover */
+}
+
+/* Button Inactive Effect */
+.button.active {
+background-color: #CCCCCC; /* Grey out the button */
+cursor: default; /* Remove cursor on hover for the active button */
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 1120px) {
+  .column.side, .column.right, .footer {
+    width: 100%;
+  }
+}

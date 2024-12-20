@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Mentor - Grounded, Happy & Free</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>ROUTINES</h2>
+    </div>
+
+    <div class="row">
+        <div class="column side"><br>
+            <button class="button" onclick="window.open('index.html', '_self')">HOME</button><br>
+            <button class="button active">ROUTINES</button><br>
+            <button class="button" onclick="window.open('resources.html', '_self')">RESOURCES</button><br>
+            <button class="button" onclick="window.open('image_gallery.html', '_self')">IMAGE GALLERY</button><br>
+            <button class="button" onclick="window.open('registration.html', '_self')">REGISTRATION</button>
+        </div>
+
+        <div class="column right">
+            <p id="dayFinder"></p>
+            <script>
+                // This script dynamically generates a daily routine based on the current day of the week. It provides users with a set of goals and resources to achieve mental clarity and well-being for each specific day.
+
+                let day;
+                let rules;
+                let goals;
+                let resources;
+
+                // Switch statement to retrieve the applicable day in order to determine the appropriate routine for that day.
+                switch (new Date().getDay()) {
+                    case 0:
+                        day = "Sunday!";
+                        rules = "<br> As part of Sunday's routine, you must accomplish <strong> three </strong> of the following goals listed below - (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress. <br><br> <strong> 2) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes). <br><br> <strong> 3) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00). <br><br> <strong> 4) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page).";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                        break;
+                    case 1:
+                        day = "Monday!";
+                        rules = "<br> As part of Monday's routine, you must accomplish <strong> three </strong> of the following goals listed below - (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes). <br><br> <strong> 2) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress. <br><br> <strong> 3) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page). <br><br> <strong> 4) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00).";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                        break;
+                    case 2:
+                        day = "Tuesday!";
+                        rules = "<br> As part of Tuesday's routine, you must accomplish <strong> three </strong> of the following goals listed below - (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page). <br><br> <strong> 2) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00). <br><br> <strong> 3) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress. <br><br> <strong> 4) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes).";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                        break;
+                    case 3:
+                        day = "Wednesday!";
+                        rules = "<br> As part of Wednesday's routine, you must accomplish <strong> three </strong> of the following goals listed below - (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress. <br><br> <strong> 2) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00). <br><br> <strong> 3) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes). <br><br> <strong> 4) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page).";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                        break;
+                    case 4:
+                        day = "Thursday!";
+                        rules = "<br> As part of Thursday's routine, you must accomplish <strong> three </strong> of the following goals listed below (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes). <br><br> <strong> 2) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page). <br><br> <strong> 3) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress. <br><br> <strong> 4) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00).";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                        break;
+                    case 5:
+                        day = "Friday!";
+                        rules = "<br> As part of Friday's routine, you must accomplish <strong> three </strong> of the following goals listed below - (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00). <br><br> <strong> 2) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress. <br><br> <strong> 3) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes). <br><br> <strong> 4) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page).";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                        break;
+                    case 6:
+                        day = "Saturday!";
+                        rules = "<br> As part of Saturday's routine, you must accomplish <strong> three </strong> of the following goals listed below - (i.e., in order to achieve mental clarity for the day):";
+                        goals = "<br><br> <strong> 1) </strong> Complete a guided deep breathing exercise (i.e., links to the guided deep breathing videos can be found on the 'Resources' page). <br><br> <strong> 2) </strong> Go for a walk or run around the block (i.e., minimum of 10 minutes). <br><br> <strong> 3) </strong> Take a 3-minute Ice Bath first thing in the morning (i.e., prior to 09:00). <br><br> <strong> 4) </strong> Spend 10 - 15 minutes practicing mindfulness meditation. Set aside a quiet space and focus on your breath or a guided meditation to center yourself and reduce stress.";
+                        resources = "<br><br><br><br><br><br> (<strong>Note: </strong> Additional resources can be found on the 'Resources' page; this page includes useful links to videos, activity instructions, and tips/tricks for certain activities - this page can be found by clicking the button on the left column labelled 'RESOURCES')";
+                }
+                document.getElementById("dayFinder").innerHTML = "Today is <strong>" + day + "</strong>" + rules + goals + resources;
+            </script>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="index.html">
+            <img src="images/logo.svg" alt="Company Logo" class="logo">
+        </a>
+        <h2 class="slogan">People. Productivity. Profitability.</h2>
+    </div>
+
+</body>
+
+</html>

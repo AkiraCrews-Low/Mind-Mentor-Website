@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Mentor - Grounded, Happy & Free</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>RESOURCES</h2>
+    </div>
+
+    <div class="row">
+        <div class="column side"><br>
+            <button class="button" onclick="window.open('index.html', '_self')">HOME</button><br>
+            <button class="button" onclick="window.open('routines.html', '_self')">ROUTINES</button><br>
+            <button class="button active">RESOURCES</button><br>
+            <button class="button" onclick="window.open('image_gallery.html', '_self')">IMAGE GALLERY</button><br>
+            <button class="button" onclick="window.open('registration.html', '_self')">REGISTRATION</button>
+        </div>
+
+        <div class="column right">
+
+            <h3 id="wkshptitle"></h3>
+            <p id="wkshpdetails"></p>
+
+            <button class="button" onclick="myFunction1()">VIDEOS</button>
+            <button class="button" onclick="myFunction2()">INSTRUCTIONS</button>
+            <button class="button" onclick="myFunction3()">TIPS & TRICKS</button>
+
+            <script>
+                // This script contains functions to display workshop resources for different activities like deep breathing, ice bath, meditation, and walk/run.
+
+                // Grants access to watch recommended videos in relation to the activities. 
+                function myFunction1() {
+                    document.getElementById("wkshpdetails").innerHTML = "<strong>Deep Breathing Video) </strong> 'Guided Wim Hof Method Breathing' <br><br> <iframe width='560' height='315' src='https://www.youtube.com/embed/tybOi4hjZFQ' frameborder='0' allowfullscreen></iframe>";
+                }
+
+                // Displays details for various activities (ice bath, deep breathing, meditation, walk/run) with step-by-step instructions.
+                function myFunction2() {
+                    document.getElementById("wkshpdetails").innerHTML = "<strong>Ice Bath) </strong> <br> Step 1 - Prepare your Ice Bath setup or find a safe body of water that is maximum 10 degress celsius or lower. <br> Step 2 - Start a timer for 3 minutes and 15 seconds. Once the timer hits 3 minutes, carefully enter the ice bath and try to slow your breathing. <br> Step 3 - After the timer finishes, dunk your head under the water and get out of the bath. <br><br> <strong>Deep Breathing) </strong> <br> Step 1 - Please navigate to the 'VIDEOS' button below to recieve guided instructions on the correct deep breathing techniques. <br><br> <strong>Meditation) </strong> <br> Step 1 - Find a quiet space away from distractions. <br> Step 2 - Set a timer for 10 to 15 minutes depending on your preference. <br> Step 3 - Start the timer, sit cross legged with your back straight, and close your eyes. <br> Step 4 - Open your eyes and readjust to your surroundings once your timer finishes. <br><br> <strong>Walk/Run) </strong> <br> Step 1 - Start a stopwatch and start walking or running around your block. <br> Step 2 - Once back to the starting point, stop your timer, and note your time to compare with future days.";
+                }
+
+                // Displays additional tips/tricks for each activity (ice bath, deep breathing, meditation, walk/run).
+                function myFunction3() {
+                    document.getElementById("wkshpdetails").innerHTML = "<strong> <u>Ice Bath</u> </strong> <br> • Try to focus on your heart beat once in the Ice Bath. This will allow your body and mind to relax and maintain focus. As a result, the immediate shock of the cold will likely be of lesser impact. <br><br> <strong> <u>Deep Breathing</u> </strong> <br> • Make sure to find a quiet area with no distractions in order to have the best chance at relaxation. <br><br> <strong> <u>Meditation</u> </strong> <br> • Set a goal for yourself prior to meditation; this will help with maintaning focus and promoting clarity (e.g., focusing on surroundings, accepting each thought and forgetting, focusing on areas of the body). <br><br> <strong> <u>Walk/Run</u> </strong> <br> • Make sure that you are breathing consistently while on the move.";
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="index.html">
+            <img src="images/logo.svg" alt="Company Logo" class="logo">
+        </a>
+        <h2 class="slogan">People. Productivity. Profitability.</h2>
+    </div>
+
+</body>
+
+</html>
