@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Mentor - Grounded, Happy & Free</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h2>REGISTRATION</h2>
+</div>
+    
+<div class="row">
+    <div class="column side"><br>
+        <button class="button" onclick="window.open('index.html', '_self')">HOME</button><br>
+        <button class="button" onclick="window.open('routines.html', '_self')">ROUTINES</button><br>
+        <button class="button" onclick="window.open('resources.html', '_self')">RESOURCES</button><br>
+        <button class="button" onclick="window.open('image_gallery.html', '_self')">IMAGE GALLERY</button><br>
+        <button class="button active">REGISTRATION</button> 
+    </div>
+    <div class="column right">
+        <div>
+            <p2>To begin your journey, <br> Please fill out the following fields.<br><br></p2>
+        </div>
+        <form id="frm1" onsubmit="getInputValue(); return false;">
+            <input
+                type="text"
+                class="input-field"
+                id="fname"
+                placeholder="First Name"
+                required
+            />
+            <div></div>
+            <input
+                type="text"
+                class="input-field"
+                id="lname"
+                placeholder="Last Name"
+                required
+            />
+            <div></div>
+            <input
+                type="text"
+                class="input-field"
+                id="username"
+                placeholder="Username"
+                required
+            />
+            <div></div>
+            <input
+                type="email"
+                class="input-field"
+                id="email"
+                placeholder="Email Address"
+                required
+            />
+            <div></div>
+            <input
+                type="password"
+                class="input-field"
+                id="password"
+                placeholder="Password"
+                required
+            />
+            <div></div>
+            <input
+                type="password"
+                class="input-field"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required
+            />
+            <div></div>
+            <select id="gender" class="input-field">
+                <option value="">Select Gender</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <div></div>
+            <input
+                type="text"
+                class="input-field"
+                id="street"
+                placeholder="Street Address"
+                required
+            />
+            <div></div>
+            <input
+                type="text"
+                class="input-field"
+                id="suburb"
+                placeholder="Suburb"
+                required
+            />
+            <div></div>
+            <input
+                type="number"
+                class="input-field"
+                id="postcode"
+                placeholder="Postcode"
+                required
+            />
+            <div></div>
+            <input
+                type="text"
+                class="input-field"
+                id="state"
+                placeholder="State"
+                required
+            />
+            <div></div>
+            <input
+                type="tel"
+                class="input-field"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            />
+            <div></div>
+            <br /><br />
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </form>
+    </div>
+</div>
+    
+<div class="footer">
+    <a href="index.html">
+        <img src="images/logo.svg" alt="Company Logo" class="logo">
+    </a>
+    <h2 class="slogan">People. Productivity. Profitability.</h2>
+</div>
+
+<script>
+    // This script retrieves user input from the registration form, validates the password, and displays an alert/s with the collected information.
+    
+    // Retrieves user input from the registration form.
+    function getInputValue() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var gender = document.getElementById("gender").value;
+        var street = document.getElementById("street").value;
+        var suburb = document.getElementById("suburb").value;
+        var postcode = document.getElementById("postcode").value;
+        var state = document.getElementById("state").value;
+        var phone = document.getElementById("phone").value;
+        
+        // Checks if passwords match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match! Please re-enter your passwords.");
+            return;
+        }
+        
+        // Displays collected information
+        var message =
+            "First Name: " + fname + "\n" +
+            "Last Name: " + lname + "\n" +
+            "Username: " + username + "\n" +
+            "Email: " + email + "\n" +
+            "Gender: " + gender + "\n" +
+            "Street Address: " + street + "\n" +
+            "Suburb: " + suburb + "\n" +
+            "Postcode: " + postcode + "\n" +
+            "State: " + state + "\n" +
+            "Phone Number: " + phone;
+        
+        alert(message);
+        
+        // Resets all form fields
+        document.getElementById("frm1").reset();
+    }
+</script>
+
+</body>
+</html>
